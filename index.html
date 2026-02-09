@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="calculator">
+      <header class="calculator__header">
+        <div>
+          <p class="calculator__eyebrow">Advanced Calculator</p>
+          <h1>Precision Mode</h1>
+        </div>
+        <div class="calculator__controls">
+          <div class="calculator__mode">
+            <span class="mode-dot"></span>
+            <span>Scientific</span>
+          </div>
+          <div class="toggle">
+            <span class="toggle__label">Angle</span>
+            <button class="toggle__button" id="angleToggle" type="button">
+              <span data-mode="DEG" class="toggle__option is-active">DEG</span>
+              <span data-mode="RAD" class="toggle__option">RAD</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="calculator__display">
+        <div class="calculator__expression" id="expression">0</div>
+        <div class="calculator__result" id="result">0</div>
+        <div class="calculator__meta">
+          <span id="angleMode">DEG</span>
+          <span id="memoryStatus">MEM: 0</span>
+        </div>
+      </section>
+
+      <section class="calculator__panels">
+        <div class="panel panel--advanced">
+          <button class="btn" data-action="func" data-value="sin">sin</button>
+          <button class="btn" data-action="func" data-value="cos">cos</button>
+          <button class="btn" data-action="func" data-value="tan">tan</button>
+          <button class="btn" data-action="func" data-value="log">log</button>
+          <button class="btn" data-action="func" data-value="ln">ln</button>
+          <button class="btn" data-action="func" data-value="sqrt">√</button>
+          <button class="btn" data-action="func" data-value="pow">xʸ</button>
+          <button class="btn" data-action="func" data-value="abs">abs</button>
+          <button class="btn" data-action="const" data-value="pi">π</button>
+          <button class="btn" data-action="const" data-value="e">e</button>
+          <button class="btn" data-action="operator" data-value="(">(</button>
+          <button class="btn" data-action="operator" data-value=")">)</button>
+          <button class="btn" data-action="factorial" data-value="!">x!</button>
+          <button class="btn" data-action="percent" data-value="%">%</button>
+          <button class="btn" data-action="operator" data-value="^">^</button>
+          <button class="btn" data-action="operator" data-value=",">,</button>
+          <button class="btn btn--ghost" data-action="memory-clear">MC</button>
+          <button class="btn btn--ghost" data-action="memory-recall">MR</button>
+          <button class="btn btn--ghost" data-action="memory-plus">M+</button>
+          <button class="btn btn--ghost" data-action="memory-minus">M-</button>
+        </div>
+
+        <div class="panel panel--main">
+          <button class="btn btn--accent" data-action="clear">AC</button>
+          <button class="btn btn--accent" data-action="delete">DEL</button>
+          <button class="btn btn--operator" data-action="operator" data-value="/">÷</button>
+          <button class="btn btn--operator" data-action="operator" data-value="*">×</button>
+
+          <button class="btn" data-action="number" data-value="7">7</button>
+          <button class="btn" data-action="number" data-value="8">8</button>
+          <button class="btn" data-action="number" data-value="9">9</button>
+          <button class="btn btn--operator" data-action="operator" data-value="-">−</button>
+
+          <button class="btn" data-action="number" data-value="4">4</button>
+          <button class="btn" data-action="number" data-value="5">5</button>
+          <button class="btn" data-action="number" data-value="6">6</button>
+          <button class="btn btn--operator" data-action="operator" data-value="+">+</button>
+
+          <button class="btn" data-action="number" data-value="1">1</button>
+          <button class="btn" data-action="number" data-value="2">2</button>
+          <button class="btn" data-action="number" data-value="3">3</button>
+          <button class="btn btn--equal" data-action="equals">=</button>
+
+          <button class="btn btn--wide" data-action="number" data-value="0">0</button>
+          <button class="btn" data-action="decimal" data-value=".">.</button>
+        </div>
+      </section>
+
+      <footer class="calculator__footer">
+        <p>Tips: Use <strong>pow(x, y)</strong> or <strong>x^y</strong>. Factorials support integers.</p>
+        <p class="calculator__hint">History keeps the last 6 calculations. Tap any item to reuse it.</p>
+      </footer>
+
+      <aside class="calculator__history">
+        <h2>History</h2>
+        <ul id="historyList"></ul>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
