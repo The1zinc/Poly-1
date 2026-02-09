@@ -1,12 +1,26 @@
 # Poly-1
 
-## Setup
+## Advanced Calculator (Vercel-ready)
 
-This repository currently contains a minimal scaffold. To get started:
+This project is a fully client-side advanced calculator with scientific functions, percentage handling,
+constants, memory keys, angle toggles (DEG/RAD), history, and keyboard support. It is designed to deploy
+directly to Vercel as a static site.
 
-1. Clone the repository.
-2. Add your application source files.
-3. Document any required dependencies and setup steps here.
+## Local Development
 
-Once you add runnable code or tooling, expand this section with concrete install and run
-instructions.
+You can open `index.html` directly in the browser, or run a small static server:
+
+```bash
+python -m http.server 5173
+```
+
+Then open `http://localhost:5173`.
+
+## Deploy to Vercel
+
+1. Push this repository to GitHub.
+2. In Vercel, click **Add New Project** and import the repo.
+3. Choose **Other** framework preset (static) and keep defaults.
+4. Deploy.
+
+No build step is required because the app is pure HTML/CSS/JS.
