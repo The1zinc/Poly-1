@@ -57,7 +57,7 @@ const updateDisplay = (value, result = lastResult) => {
   expressionEl.textContent = value || "0";
   resultEl.textContent = result;
   angleModeEl.textContent = angleMode;
-  memoryStatusEl.textContent = `MEM: ${memoryValue}`;
+  memoryStatusEl.textContent = `MEM: ${formatResult(memoryValue)}`;
 };
 
 const insertValue = (value) => {
