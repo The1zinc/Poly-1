@@ -54,3 +54,9 @@ Then open `http://localhost:5173`.
 4. Deploy.
 
 No build step is required because the app is pure HTML/CSS/JS.
+
+## Project Structure
+
+- `index.html`: UI layout and calculator controls.
+- `styles.css`: theme, component styling, and responsive behavior.
+- `app.js`: expression parsing, evaluation logic, memory, and history.
