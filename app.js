@@ -70,6 +70,18 @@ const canInsertDecimal = () => {
   return !segment.includes(".");
 };
 
+const isOperator = (value) => /^[+\-*/^]$/.test(value);
+
+const insertOperator = (value) => {
+  if (isOperator(expression.slice(-1))) {
+    expression = `${expression.slice(0, -1)}${value}`;
+    updateDisplay(expression);
+    return;
+  }
+
+  insertValue(value);
+};
+
 const clearAll = () => {
   expression = "";
   lastResult = "0";
@@ -199,7 +211,7 @@ buttons.forEach((button) => {
         insertValue(value);
         break;
       case "operator":
-        insertValue(value);
+        insertOperator(value);
         break;
       case "decimal":
         if (canInsertDecimal()) {
