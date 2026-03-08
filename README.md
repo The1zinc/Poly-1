@@ -60,3 +60,11 @@ No build step is required because the app is pure HTML/CSS/JS.
 - `index.html`: UI layout and calculator controls.
 - `styles.css`: theme, component styling, and responsive behavior.
 - `app.js`: expression parsing, evaluation logic, memory, and history.
+
+## Browser Support
+
+The calculator targets modern evergreen browsers that support:
+
+- ES2015+ JavaScript features
+- CSS Grid and custom properties
+- `Math.log10` and related built-in math APIs
