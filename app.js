@@ -108,7 +108,11 @@ const updateHistory = () => {
   historyList.innerHTML = "";
   historyItems.forEach((item) => {
     const entry = document.createElement("li");
-    entry.innerHTML = `<div>${item.expression}</div><strong>${item.result}</strong>`;
+    const expressionLine = document.createElement("div");
+    expressionLine.textContent = item.expression;
+    const resultValue = document.createElement("strong");
+    resultValue.textContent = item.result;
+    entry.append(expressionLine, resultValue);
     entry.addEventListener("click", () => {
       expression = item.expression;
       lastResult = item.result;
