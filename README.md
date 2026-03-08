@@ -34,6 +34,12 @@ Then open `http://localhost:5173`.
 - `Escape`: clear current expression
 - Numeric keys and basic operators map directly to calculator input
 
+## Memory Controls
+
+- `MC` resets memory to zero.
+- `MR` inserts the current memory value into the expression.
+- `M+` and `M-` use the latest computed result.
+
 ## Deploy to Vercel
 
 1. Push this repository to GitHub.
