@@ -296,7 +296,7 @@ window.addEventListener("keydown", (event) => {
     return;
   }
 
-  if (/^[0-9+\-*/().,^]$/.test(key)) {
+  if (/^[0-9+\-*/().,^%]$/.test(key)) {
     insertValue(key);
   }
 });
