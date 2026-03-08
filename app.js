@@ -72,6 +72,7 @@ const clearAll = () => {
 };
 
 const deleteLast = () => {
+  if (!expression) return;
   expression = expression.slice(0, -1);
   updateDisplay(expression);
 };
