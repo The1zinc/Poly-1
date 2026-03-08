@@ -40,6 +40,12 @@ Then open `http://localhost:5173`.
 - `MR` inserts the current memory value into the expression.
 - `M+` and `M-` use the latest computed result.
 
+## Expression Tips
+
+- Use either `x^y` or `pow(x, y)` for exponentiation.
+- Factorial works on non-negative integers only.
+- Percent input is converted internally to `/100`.
+
 ## Deploy to Vercel
 
 1. Push this repository to GitHub.
