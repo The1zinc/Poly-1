@@ -176,6 +176,8 @@ const transformFactorial = (input) => {
   return output;
 };
 
+const trimTrailingOperators = (input) => input.replace(/[+\-*/^.,]+$/, "");
+
 const sanitizeExpression = (input) => {
   if (!allowedPattern.test(input)) {
     throw new Error("Invalid characters in expression.");
@@ -193,10 +195,11 @@ const sanitizeExpression = (input) => {
 };
 
 const evaluateExpression = () => {
-  if (!expression.trim()) return;
+  const normalizedExpression = trimTrailingOperators(expression.trim());
+  if (!normalizedExpression) return;
 
   try {
-    const sanitized = sanitizeExpression(expression);
+    const sanitized = sanitizeExpression(normalizedExpression);
     // eslint-disable-next-line no-new-func
     const evaluator = new Function(
       ...Object.keys(mathBindings),
@@ -209,6 +212,7 @@ const evaluateExpression = () => {
     }
 
     lastResult = formatResult(result);
+    expression = normalizedExpression;
     updateDisplay(expression, lastResult);
     recordHistory(expression, lastResult);
   } catch (error) {
