@@ -92,6 +92,18 @@ const insertOperator = (value) => {
   insertValue(value);
 };
 
+const needsImplicitMultiply = () => /[0-9)eπi.]$/.test(expression);
+
+const insertFunction = (name) => {
+  const prefix = needsImplicitMultiply() ? "*" : "";
+  insertValue(`${prefix}${name}(`);
+};
+
+const insertConstant = (name) => {
+  const prefix = needsImplicitMultiply() ? "*" : "";
+  insertValue(`${prefix}${name}`);
+};
+
 const clearAll = () => {
   expression = "";
   lastResult = "0";
@@ -245,10 +257,10 @@ buttons.forEach((button) => {
         }
         break;
       case "func":
-        insertValue(`${value}(`);
+        insertFunction(value);
         break;
       case "const":
-        insertValue(value);
+        insertConstant(value);
         break;
       case "factorial":
         insertValue(value);
