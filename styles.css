@@ -256,6 +256,11 @@ body {
   background: #2b3241;
 }
 
+.calculator__history li:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
 .calculator__hint {
   margin-top: 8px;
 }
