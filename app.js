@@ -13,6 +13,7 @@ let memoryValue = 0;
 const historyItems = [];
 const HISTORY_LIMIT = 6;
 const RESULT_PRECISION = 6;
+const MAX_EXPRESSION_LENGTH = 220;
 
 const allowedPattern = /^[0-9+\-*/().,^%!\s,a-zA-Zπe]*$/;
 
@@ -61,6 +62,10 @@ const updateDisplay = (value, result = lastResult) => {
 };
 
 const insertValue = (value) => {
+  if (expression.length + value.length > MAX_EXPRESSION_LENGTH) {
+    return;
+  }
+
   expression += value;
   updateDisplay(expression);
 };
