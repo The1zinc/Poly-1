@@ -8,7 +8,7 @@ directly to Vercel as a static site.
 
 ## Contents
 
-- [Local Development](#local-development)
+- [Local Development](#local-development-quick-start)
 - [Deploy to Vercel](#deploy-to-vercel)
 
 ## Feature Highlights
@@ -17,7 +17,7 @@ directly to Vercel as a static site.
 - Constants and helpers (`π`, `e`, factorial, and percent shortcuts).
 - Built-in memory controls with a compact six-item calculation history.
 
-## Local Development
+## Local Development (Quick Start)
 
 You can open `index.html` directly in the browser, or run a small static server:
 
