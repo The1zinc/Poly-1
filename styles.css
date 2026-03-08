@@ -226,6 +226,11 @@ body {
   color: var(--accent-soft);
 }
 
+.btn[data-action="ans"] {
+  border-color: #3a4f63;
+  color: #90d4ff;
+}
+
 .calculator__history {
   background: var(--panel-soft);
   padding: 20px;
