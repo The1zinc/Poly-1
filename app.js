@@ -48,6 +48,11 @@ const mathBindings = {
   factorial: customFunctions.factorial,
 };
 
+const formatResult = (value) =>
+  Number.isInteger(value)
+    ? value.toString()
+    : value.toFixed(RESULT_PRECISION).replace(/0+$/, "").replace(/\.$/, "");
+
 const updateDisplay = (value, result = lastResult) => {
   expressionEl.textContent = value || "0";
   resultEl.textContent = result;
@@ -169,9 +174,7 @@ const evaluateExpression = () => {
       throw new Error("Result is not finite.");
     }
 
-    lastResult = Number.isInteger(result)
-      ? result.toString()
-      : result.toFixed(6).replace(/0+$/, "").replace(/\.$/, "");
+    lastResult = formatResult(result);
     updateDisplay(expression, lastResult);
     recordHistory(expression, lastResult);
   } catch (error) {
