@@ -321,7 +321,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (key === "a" || key === "A") {
-    angleToggle.click();
+    toggleAngleMode();
     return;
   }
 
