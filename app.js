@@ -108,15 +108,23 @@ const updateHistory = () => {
   historyList.innerHTML = "";
   historyItems.forEach((item) => {
     const entry = document.createElement("li");
+    entry.tabIndex = 0;
     const expressionLine = document.createElement("div");
     expressionLine.textContent = item.expression;
     const resultValue = document.createElement("strong");
     resultValue.textContent = item.result;
     entry.append(expressionLine, resultValue);
-    entry.addEventListener("click", () => {
+    const useHistoryItem = () => {
       expression = item.expression;
       lastResult = item.result;
       updateDisplay(expression, lastResult);
+    };
+    entry.addEventListener("click", useHistoryItem);
+    entry.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        useHistoryItem();
+      }
     });
     historyList.appendChild(entry);
   });
