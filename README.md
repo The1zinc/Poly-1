@@ -6,6 +6,11 @@ This project is a fully client-side advanced calculator with scientific function
 constants, memory keys, angle toggles (DEG/RAD), history, and keyboard support. It is designed to deploy
 directly to Vercel as a static site.
 
+## Contents
+
+- [Local Development](#local-development)
+- [Deploy to Vercel](#deploy-to-vercel)
+
 ## Local Development
 
 You can open `index.html` directly in the browser, or run a small static server:
