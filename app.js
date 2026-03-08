@@ -262,6 +262,11 @@ buttons.forEach((button) => {
       case "const":
         insertConstant(value);
         break;
+      case "ans":
+        if (lastResult !== "Error") {
+          insertValue(lastResult);
+        }
+        break;
       case "factorial":
         insertValue(value);
         break;
