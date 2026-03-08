@@ -281,13 +281,15 @@ buttons.forEach((button) => {
   });
 });
 
-angleToggle.addEventListener("click", () => {
+const toggleAngleMode = () => {
   angleMode = angleMode === "DEG" ? "RAD" : "DEG";
   angleToggle.querySelectorAll(".toggle__option").forEach((option) => {
     option.classList.toggle("is-active", option.dataset.mode === angleMode);
   });
   updateDisplay(expression, lastResult);
-});
+};
+
+angleToggle.addEventListener("click", toggleAngleMode);
 
 window.addEventListener("keydown", (event) => {
   const { key } = event;
