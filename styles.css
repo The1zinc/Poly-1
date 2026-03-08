@@ -26,7 +26,7 @@ body {
 }
 
 .calculator {
-  width: min(940px, 92vw);
+  width: min(940px, 100%);
   background: var(--panel);
   padding: 32px;
   border-radius: 28px;
