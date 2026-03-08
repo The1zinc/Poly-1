@@ -274,7 +274,7 @@ buttons.forEach((button) => {
         break;
       case "ans":
         if (lastResult !== "Error") {
-          insertValue(lastResult);
+          insertNumericToken(lastResult);
         }
         break;
       case "factorial":
@@ -353,7 +353,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (key === "m" || key === "M") {
-    insertValue(memoryValue.toString());
+    insertNumericToken(memoryValue.toString());
     return;
   }
 
