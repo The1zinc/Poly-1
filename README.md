@@ -27,6 +27,13 @@ python -m http.server 5173
 
 Then open `http://localhost:5173`.
 
+## Keyboard Shortcuts
+
+- `Enter`: evaluate expression
+- `Backspace`: delete last character
+- `Escape`: clear current expression
+- Numeric keys and basic operators map directly to calculator input
+
 ## Deploy to Vercel
 
 1. Push this repository to GitHub.
