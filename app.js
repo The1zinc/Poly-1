@@ -11,6 +11,8 @@ let lastResult = "0";
 let angleMode = "DEG";
 let memoryValue = 0;
 const historyItems = [];
+const HISTORY_LIMIT = 6;
+const RESULT_PRECISION = 6;
 
 const allowedPattern = /^[0-9+\-*/().,^%!\s,a-zA-Zπe]*$/;
 
