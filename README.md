@@ -11,6 +11,12 @@ directly to Vercel as a static site.
 - [Local Development](#local-development)
 - [Deploy to Vercel](#deploy-to-vercel)
 
+## Feature Highlights
+
+- Scientific operators (`sin`, `cos`, `tan`, `log`, `ln`, `sqrt`, `pow`, `abs`).
+- Constants and helpers (`π`, `e`, factorial, and percent shortcuts).
+- Built-in memory controls with a compact six-item calculation history.
+
 ## Local Development
 
 You can open `index.html` directly in the browser, or run a small static server:
