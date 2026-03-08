@@ -109,6 +109,11 @@ const insertConstant = (name) => {
   insertValue(`${prefix}${name}`);
 };
 
+const insertNumericToken = (token) => {
+  const prefix = needsImplicitMultiply() ? "*" : "";
+  insertValue(`${prefix}${token}`);
+};
+
 const clearAll = () => {
   expression = "";
   lastResult = "0";
@@ -291,7 +296,7 @@ buttons.forEach((button) => {
         updateMemory(0);
         break;
       case "memory-recall":
-        insertValue(memoryValue.toString());
+        insertNumericToken(memoryValue.toString());
         break;
       case "memory-plus": {
         const value = Number(lastResult);
