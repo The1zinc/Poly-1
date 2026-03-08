@@ -274,6 +274,17 @@ body {
   color: var(--accent-soft);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .calculator__history li {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 860px) {
   .calculator__panels {
     grid-template-columns: 1fr;
