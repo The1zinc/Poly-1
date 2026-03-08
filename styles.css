@@ -245,6 +245,15 @@ body {
   overflow: auto;
 }
 
+.calculator__history ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.calculator__history ul::-webkit-scrollbar-thumb {
+  background: #3a4154;
+  border-radius: 999px;
+}
+
 .calculator__history li {
   background: #222733;
   border-radius: 14px;
