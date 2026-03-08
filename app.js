@@ -306,6 +306,11 @@ window.addEventListener("keydown", (event) => {
     return;
   }
 
+  if (key === "a" || key === "A") {
+    angleToggle.click();
+    return;
+  }
+
   if (/^[0-9+\-*/().,^%!]$/.test(key)) {
     insertValue(key);
   }
