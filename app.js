@@ -73,6 +73,10 @@ const canInsertDecimal = () => {
 const isOperator = (value) => /^[+\-*/^]$/.test(value);
 
 const insertOperator = (value) => {
+  if (!expression && value !== "-") {
+    return;
+  }
+
   if (isOperator(expression.slice(-1))) {
     expression = `${expression.slice(0, -1)}${value}`;
     updateDisplay(expression);
