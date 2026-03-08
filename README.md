@@ -45,6 +45,7 @@ Then open `http://localhost:5173`.
 - Use either `x^y` or `pow(x, y)` for exponentiation.
 - Factorial works on non-negative integers only.
 - Percent input is converted internally to `/100`.
+- Use `Ans` to insert the last successful result into a new expression.
 
 ## Deploy to Vercel
 
