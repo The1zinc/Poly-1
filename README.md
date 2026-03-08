@@ -74,3 +74,9 @@ The calculator targets modern evergreen browsers that support:
 - Core interactions are available with both mouse and keyboard.
 - The calculator keeps status labels visible for memory and angle mode.
 - History entries can be reused quickly to reduce repeated typing.
+
+## Deployment Checklist
+
+- Confirm static files (`index.html`, `styles.css`, `app.js`) are present on `main`.
+- Verify that history and memory actions work in the deployed environment.
+- Smoke test expression parsing for `pow`, factorial, and percent operations.
