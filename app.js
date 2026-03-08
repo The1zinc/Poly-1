@@ -65,6 +65,11 @@ const insertValue = (value) => {
   updateDisplay(expression);
 };
 
+const canInsertDecimal = () => {
+  const segment = expression.split(/[+\-*/^(),]/).pop() || "";
+  return !segment.includes(".");
+};
+
 const clearAll = () => {
   expression = "";
   lastResult = "0";
@@ -191,9 +196,15 @@ buttons.forEach((button) => {
 
     switch (action) {
       case "number":
-      case "operator":
-      case "decimal":
         insertValue(value);
+        break;
+      case "operator":
+        insertValue(value);
+        break;
+      case "decimal":
+        if (canInsertDecimal()) {
+          insertValue(value);
+        }
         break;
       case "func":
         insertValue(`${value}(`);
