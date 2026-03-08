@@ -296,6 +296,11 @@ window.addEventListener("keydown", (event) => {
     return;
   }
 
+  if (key === "x" || key === "X") {
+    insertOperator("*");
+    return;
+  }
+
   if (/^[0-9+\-*/().,^%!]$/.test(key)) {
     insertValue(key);
   }
