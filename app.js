@@ -93,7 +93,7 @@ const updateHistory = () => {
 
 const recordHistory = (value, result) => {
   historyItems.unshift({ expression: value, result });
-  if (historyItems.length > 6) {
+  if (historyItems.length > HISTORY_LIMIT) {
     historyItems.pop();
   }
   updateHistory();
