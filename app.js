@@ -77,6 +77,12 @@ const insertOperator = (value) => {
     return;
   }
 
+  if (value === "(" && /[0-9)eπi.]$/.test(expression)) {
+    expression += "*(";
+    updateDisplay(expression);
+    return;
+  }
+
   if (isOperator(expression.slice(-1))) {
     expression = `${expression.slice(0, -1)}${value}`;
     updateDisplay(expression);
