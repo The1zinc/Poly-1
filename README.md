@@ -32,6 +32,9 @@ Then open `http://localhost:5173`.
 - `Enter`: evaluate expression
 - `Backspace`: delete last character
 - `Escape`: clear current expression
+- `A`: toggle angle mode between `DEG` and `RAD`
+- `M`: insert current memory value
+- `X`: quick multiply input (maps to `*`)
 - Numeric keys and basic operators map directly to calculator input
 
 ## Memory Controls
