@@ -301,6 +301,11 @@ window.addEventListener("keydown", (event) => {
     return;
   }
 
+  if (key === "m" || key === "M") {
+    insertValue(memoryValue.toString());
+    return;
+  }
+
   if (/^[0-9+\-*/().,^%!]$/.test(key)) {
     insertValue(key);
   }
