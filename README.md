@@ -68,3 +68,9 @@ The calculator targets modern evergreen browsers that support:
 - ES2015+ JavaScript features
 - CSS Grid and custom properties
 - `Math.log10` and related built-in math APIs
+
+## Accessibility Notes
+
+- Core interactions are available with both mouse and keyboard.
+- The calculator keeps status labels visible for memory and angle mode.
+- History entries can be reused quickly to reduce repeated typing.
