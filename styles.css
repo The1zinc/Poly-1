@@ -188,6 +188,11 @@ body {
   transform: translateY(0);
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
 .btn--operator {
   background: #2a2f3d;
   color: var(--accent-soft);
